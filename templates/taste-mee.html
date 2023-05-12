@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raffles Eatz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <a href="{{ url_for('home') }}"><button id="goback" value="Go Back">Go Back</button></a>
+
+    <h1>Taste Mee</h1>
+
+    <form action=" {{ url_for('order')}}" method="POST">
+    
+    <!-- entire container -->
+    <div id="container">
+        <!-- individual divs/containers -->
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/tom-yum.webp')}}" />
+            <p>Tom Yum $3.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tm" value="Tom Yum"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/minced-meat-noodles.webp')}}" />
+            <p>Minced Meat Noodles $3.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tm" value="Minced Meat Noodles"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/fishball-noodles.jpeg')}}" />
+            <p>Fishball Noodles $3.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tm" value="Fishball Noodles"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/wanton-mee-dry.webp')}}" />
+            <p>Wonton Mee (Dry) $3.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tm" value="Wonton Mee (Dry)"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/wanton-mee-soup.webp')}}" />
+            <p>Wonton Mee (Soup) $3.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tm" value="Wanton Mee (Soup)"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/laksa.jpeg')}}" />
+            <p>Laksa $3.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tm" value="Laksa"></label>
+        </div>
+    </div>
+
+    <!-- remarks section -->
+    <table>
+        <tr>
+            <td>Any Remarks?  <input type='text' name='remarks' id="textbox"></td>
+            <td> 
+                <input type="submit" id="submit" name="Submit">
+               
+            </td>
+        </tr>
+    </table>
+
+    </form>
+
+</body>
+</html>

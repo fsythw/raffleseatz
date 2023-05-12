@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raffles Eatz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <a href="{{ url_for('home') }}"><button id="goback" value="Go Back">Go Back</button></a>
+
+    <h1>Go Greens</h1>
+
+    <form action=" {{ url_for('order')}}" method="POST">
+
+    <!-- entire container -->
+    <div id="container">
+        <!-- individual divs/containers -->
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/scrambled-eggs.webp')}}" />
+            <p>Scrambled Eggs $0.60</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Scrambled Eggs"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/cabbage.jpeg')}}" />
+            <p>Cabbage $0.50</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Cabbage"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/bittergourdegg.jpeg')}}" />
+            <p>Bittergourd $0.50</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Bittergourd"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/char-siew.jpeg')}}" />
+            <p>Char Siew $0.70</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Char Siew"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/sweet-sour-pork.jpeg')}}" />
+            <p>Sweet and Sour Pork $0.70</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Sweet & Sour Pork"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/sunny-side-up.jpeg')}}" />
+            <p>Sunny Side Up $0.60</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Sunny Side Up"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/rice.webp')}}" />
+            <p>Rice $0.50</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Rice"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/fried-noodles.jpeg')}}" />
+            <p>Fried Noodles $0.70</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Fried Noodles"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/fried-rice.jpeg')}}" />
+            <p>Fried Rice $1.00</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="gg" value="Fried Rice"></label>
+        </div>
+    </div>
+
+    <!-- remarks section -->
+    <table>
+        <tr>
+            <td>Any Remarks?  <input type='text' name='remarks' id="textbox"></td>
+            <td> 
+                <input type="submit" id="submit" name="Submit">
+               
+            </td>
+        </tr>
+    </table>
+    </form>
+
+</body>
+</html>

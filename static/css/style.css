@@ -1,0 +1,128 @@
+*{
+    background: #C1BCBC;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    padding: 10px;
+}
+
+/*index.html*/
+#intro{
+    text-align: center;
+}
+#intro h1{
+    padding-top: 2%;
+    font-size: 50px;
+}
+#intro p{
+    font-size: 25px;
+    line-height: 1.4em;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#intro img{
+    height: 220px;
+    width: auto;
+    border: transparent;
+}
+#preview{
+    font-size: 25px;
+    text-align: center;
+}
+.buttons {
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+button {
+    background-color: #fff000;
+    font-size: 25px;
+    width: 120px;
+    border-radius: 8px;
+    border: 2px double red;
+    cursor: pointer; 
+    padding: 5px 10px;
+    line-height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+button:hover {
+    background-color: green;
+}
+/*----------------------------------------------------------------*/
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#cont{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 60%;
+    padding: 20px;
+    border: 1px solid goldenrod;
+    text-align: center;
+}
+img{
+    width: 320px;
+    height: 210px;
+    margin: auto;
+    border-radius: 16px;
+    border: 1px dotted black;
+}
+p,label{
+    margin-top: 13px;
+    font-size: 20px;
+}
+input.checkbox{
+    justify-content: right;
+    transform: translateY(4px);
+    width: 20px;
+    height: 20px;
+}
+input:checked {
+    border: none;
+    outline: 1px solid deeppink;
+}
+table,td{
+    font-size: 25px;
+    padding: 20px;
+}
+#textbox{
+    height: 25px;
+    width: 550px;
+}
+#submit{
+    font-size: 20px;
+    height: 35px;
+    width: 100px;
+    background-color: aquamarine;
+    border: 2px double blueviolet solid;
+    cursor: pointer;
+}
+/*----------------------------------------------------------------
+/*queue.html*/
+h2{
+    font-size: 50px;
+    text-align: center;
+}
+#goback{
+    font-size: 20px;
+    height: 35px;
+    width: 100px;
+    border: 2px double blueviolet;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+#goback:hover{
+    background-color: red;
+}

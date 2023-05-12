@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Queue Number</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Your queue number is: </h1>
+    <h2>{{ queue_number }} </h2>
+    <a href="{{ url_for('home') }}"><button id="goback" value="Go Back">Go Back</button></a>
+
+</body>
+</html>

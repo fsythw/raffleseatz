@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raffles Eatz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <a href="{{ url_for('home') }}"><button id="goback" value="Go Back">Go Back</button></a>
+
+    <h1>Nek's Special</h1>
+
+    <form action=" {{ url_for('order')}}" method="POST">
+    <!-- entire container -->
+    <div id="container">
+        <!-- individual divs/containers -->
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/hashbrown.webp')}}" />
+            <p>Hashbrown $0.50</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="ns" value="Hashbrown"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/sambal-egg.jpeg')}}" />
+            <p>Sambal Egg $0.60</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="ns" value="Sambal Egg"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/sambal-kangkong.jpeg')}}" />
+            <p>Sambal Kangkong $0.60</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="ns" value="Sambal Kangkong"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/fried-chicken.webp')}}" />
+            <p>Fried Chicken $0.70</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="ns" value="Fried Chicken"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/chicken-curry.jpeg')}}" />
+            <p>Chicken Curry $0.70</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="ns" value="Chicken Curry"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/rice.webp')}}" />
+            <p>Rice $0.50</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="ns" value="Rice"></label>
+        </div>
+    </div>
+
+    <!-- remarks section -->
+    <table>
+        <tr>
+            <td>Any Remarks?  <input type='text' name='remarks' id="textbox"></td>
+            <td> 
+                <input type="submit" id="submit" name="Submit">
+               
+            </td>
+        </tr>
+    </table>
+    </form>
+
+</body>
+</html>

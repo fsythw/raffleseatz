@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raffles Eatz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <a href="{{ url_for('home') }}"><button id="goback" value="Go Back">Go Back</button></a>
+
+    <h1>Oishi</h1>
+    
+    <form action=" {{ url_for('order')}}" method="POST">
+    <!-- entire container -->
+    <div id="container">
+        <!-- individual divs/containers -->
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/oyakodon.jpeg')}}" />
+            <p>Oyakodon (Chicken and Egg) $3.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="oi" value="Oyakodon"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/chicken-katsu.jpeg')}}" />
+            <p>Chicken Katsu Don $3.50</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="oi" value="Chicken Katsu Don"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/gyudon.jpeg')}}" />
+            <p>Gyudon (Beef) $3.70</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="oi" value="Gyudon (Beef)"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/chawanmushi.jpeg')}}" />
+            <p>Chawanmushi $1.00</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="oi" value="Chawanmushi"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/california-handroll.jpeg')}}" />
+            <p>California Handroll $1.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="oi" value="California Handroll"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/soft-shell-crab-handroll.jpeg')}}" />
+            <p>Soft Shell Crab Handroll $1.50</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="oi" value="Soft Shell Crab Handroll"></label>
+        </div>
+    </div>
+
+    <!-- remarks section -->
+    <table>
+        <tr>
+            <td>Any Remarks?  <input type='text' name='remarks' id="textbox"></td>
+            <td> 
+                <input type="submit" id="submit" name="Submit">
+               
+            </td>
+        </tr>
+    </table>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raffles Eatz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <a href="{{ url_for('home') }}"><button id="goback" value="Go Back">Go Back</button></a>
+
+    <h1>Thirst Tea</h1>
+    <form action=" {{ url_for('order')}}" method="POST">
+    
+    <!-- entire container -->
+    <div id="container">
+        <!-- individual divs/containers -->
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/milo.webp')}}" />
+            <p>Milo $1.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tt" value="Milo"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/ice-lemon-tea.jpeg')}}" />
+            <p>Iced Lemon Tea $1.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tt" value="Iced Lemon Tea"></label>
+        </div>
+        <div id="cont">
+            <img src="{{url_for('static', filename='pics/green-tea.jpeg')}}" />
+            <p>Iced Green Tea $1.20</p>
+            <label>Order: <input type="checkbox" class="checkbox" name="tt" value="Iced Green Tea"></label>
+        </div>
+    </div>
+
+    <!-- remarks section -->
+    <table>
+        <tr>
+            <td>Any Remarks?  <input type='text' name='remarks' id="textbox"></td>
+            <td> 
+                <input type="submit" id="submit" name="Submit">
+               
+            </td>
+        </tr>
+    </table>
+
+    </form>
+</body>
+</html>
